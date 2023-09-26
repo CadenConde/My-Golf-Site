@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: rgb(144, 238, 144);
+}
+p.error{
+    padding-top: 20px;
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 25px;
+}
+.container{
+    text-align: center;
+}
+
+/*Background image stuff*/
+.bgImages{
+    opacity: .15;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/BGhole1.webp), url(../images/BGhole2.webp);
+    background-repeat: no-repeat, no-repeat;
+}
+.format1{
+    background-size: 2500px, 1500px;
+    background-position:600px 0px, -200px -100px;
+}
+.format2{
+    background-size: 2500px, 1500px;
+    background-position:-300px -300px, 800px 100px;
+}
+
+/*login stuff*/
+input.login{
+    background-color: white;
+    height: 30px;
+    width: 100%;
+}
+
+p.login{
+    width: 100%;
+    padding-top:30px;
+    font-weight: bold;
+    text-align: left;
+    color:white;
+}
+
+.login-container{  
+    width:300px;
+    align-items: center;
+    margin:auto;
+    margin-top: 10px;
+    background: rgba(46, 46, 46);
+    padding: 20px;
+    border-radius: 10px;
+    height: 375px;
+}
+
+p.login-title{
+    font-size: 30px;
+    color:white
+}
+
+input.submit{
+    margin-top:30px;
+    width:100%;
+    height: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    color:rgb(255, 255, 255);
+    border: 1px solid rgb(32, 49, 26);
+    box-shadow: 5px 5px rgb(32, 49, 26);
+    border-radius: 5px;
+    background-color: rgb(73, 113, 59);
+    margin-bottom: 30px;
+}
+
+input.submit:hover{
+    border: 1px solid rgb(13, 20, 11);
+    box-shadow: 5px 5px rgb(13, 20, 11);
+    background-color: rgb(63, 96, 50);
+}
+
+section.navBar{
+    text-align: center;
+    color: #90ee90;
+    padding-top: 15px;
+    font-size: 40px;
+    background-color: rgb(73, 113, 59);
+    width:100%;
+    height: 60px;
+}
+.footer{
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    position: absolute;
+    margin: auto;
+    bottom: 0px;
+    padding-top: 20px;
+    height: 100px;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.5));
+}
+img.nav{
+    position:absolute;
+}
