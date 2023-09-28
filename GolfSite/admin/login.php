@@ -27,11 +27,9 @@
                 <?php
                     
                     if($_SESSION["loggedIn"]){
-                        if($_SESSION["loggedIn"] != 1){
-                            if ($_SESSION["loggedIn"] == "sorry") {
-                                echo '<p class="error">Session Timeout, Please Log-In Again';
-                            }
-                        }
+                        if ($_SESSION["loggedIn"] == "sorry") {
+                            echo '<p class="error">Session Timeout, Please Log-In Again';
+                        } 
                     }
 
                     $_SESSION["loggedIn"] = false;

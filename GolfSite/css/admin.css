@@ -1,3 +1,8 @@
+:root{
+    --number-of-cards: round(down,(100vw / 440px));
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -135,6 +140,7 @@ img.nav{
     height: 45px;
     top:2px;
     transition: .3s;
+    cursor:pointer;
 }
 img.nav:hover{
     opacity: .66;
@@ -153,4 +159,23 @@ img.nav:hover{
     right:55px;
     top:0px;
     z-index: 30;
+}
+
+.cardContainer{
+    width: calc(100vw - var(--number-of-cards) * 400px);
+    margin:auto;
+    text-align: left;
+}
+.adminCard{
+    width: 300px;
+    background-color: #90ee90;
+    border-radius: 10px;
+    padding: 50px;
+    margin:20px;
+    display: inline-flex;
+    cursor:pointer;
+}
+a{
+    all:unset;
+    
 }
