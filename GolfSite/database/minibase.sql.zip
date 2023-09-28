@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 26, 2023 at 04:22 AM
+-- Generation Time: Sep 28, 2023 at 05:15 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -42,6 +42,27 @@ INSERT INTO `employees` (`EmployeeID`, `AccountType`, `Username`, `Password`) VA
 (1, 'Manager', 'admin', '5f4dcc3b5aa765d61d8327deb882cf99'),
 (2, 'Employee', 'admin1', '5f4dcc3b5aa765d61d8327deb882cf99');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `notifications`
+--
+
+CREATE TABLE `notifications` (
+  `notifID` int(11) NOT NULL,
+  `employeeID` int(11) NOT NULL,
+  `notifContent` varchar(255) NOT NULL,
+  `beenRead` tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `notifications`
+--
+
+INSERT INTO `notifications` (`notifID`, `employeeID`, `notifContent`, `beenRead`) VALUES
+(1, 1, 'This is a test notification', 0),
+(2, 1, 'Another notification', 0);
+
 --
 -- Indexes for dumped tables
 --
@@ -53,6 +74,12 @@ ALTER TABLE `employees`
   ADD PRIMARY KEY (`EmployeeID`);
 
 --
+-- Indexes for table `notifications`
+--
+ALTER TABLE `notifications`
+  ADD PRIMARY KEY (`notifID`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -61,6 +88,12 @@ ALTER TABLE `employees`
 --
 ALTER TABLE `employees`
   MODIFY `EmployeeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `notifications`
+--
+ALTER TABLE `notifications`
+  MODIFY `notifID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
