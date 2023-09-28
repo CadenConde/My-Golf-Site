@@ -1,21 +1,10 @@
-/*
-IDEAS
-
--Page transition animation (fade in maybe)
--Possible static background with moving text (unlikely)
--Logo is home button, then Booking, FAQs, Pricing, Contact pages
--Dynamic navigation bar based on scroll
-
-*/
-
-
 /* General css */
 @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-   
+    box-sizing: border-box;
 }
 
 body {
@@ -25,6 +14,7 @@ body {
 /* Top section */
 
 .top-container {
+    position: absolute;
     width: 100%;
     height: 100vh;
     background-image: url("../images/golf_bg.jpg");
@@ -33,7 +23,7 @@ body {
     background-size: cover;
 }
 
-.nav-logo a img {
+#nav-logo img {
     background-color: white;
     border-radius: 10px;
     height: 100px;
@@ -41,46 +31,66 @@ body {
     padding: 5px;
 }
 
-.nav-container {
-    display: flex;
+#nav-container {
+    width: 100%;
+    position: fixed;
+    display: inline-flex;
     flex-direction: row wrap;
-    padding: 2.5% 15% 0 15%;
+    align-items: center;
+    padding: 1% 10%;
+    background-color: rgba(33, 33, 33, 0.75);
+    z-index: 99;
+    transition: 0.5s;
 }
 
 .nav-content {
     text-align: center;
     width: 100%;
     text-align: right;
+    display: inline;
+    text-align: right;
 }
 
 .nav-content a {
-    display: inline-flex;
-    justify-self: baseline;
-    color: white;
+    background-color: white;
+    color: black;
     font-weight: 800;
     text-decoration: none;
     font-family: 'Inclusive Sans', sans-serif;
     font-size: 18px;
-    border: 3px solid black;
     border-radius: 10px;
     padding: 20px;
     margin: 0 0.5%;
     transition: 0.5s ease;
 }
 
+.nav-content a:first-of-type {
+    background-color: #131313;
+    color: white;
+
+}
+
+.nav-content a:first-of-type:hover {
+    background-color: lightgreen;
+    color: black;
+    
+}
+
 .nav-content a:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    color: black;
+    background-color: lightgreen;
 }
 
 .home-text {
+    position: relative;
     font-family: 'Inclusive Sans', sans-serif;
     color: white;
     font-weight: bold;
     margin-left: 15%;
-    margin-top: 7.5%;
+    margin-top: 15%;
     font-size: 2em;
     width: 30%;
-    background-color: rgba(50, 50, 50, 0.5);
+    background-color: rgba(33, 33, 33, 0.75);
     border-radius: 10px;
     padding: 1%;
 }
@@ -88,6 +98,5 @@ body {
 /* Middle section */
 
 .mid-container {
-    height: 1000px;
-    background-color: #004e63;
+    height: 2000px;
 }
