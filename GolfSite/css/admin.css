@@ -54,7 +54,7 @@ p.error{
 
 /*login stuff*/
 input.login{
-    background-color: rgb(213, 213, 213);
+    background-color: rgb(255, 255, 255);
     height: 30px;
     width: 100%;
     border:none;
@@ -66,7 +66,8 @@ p.login{
     padding-top:30px;
     font-weight: bold;
     text-align: left;
-    color:rgb(213, 213, 213);
+    font-size: 20px;
+    color:rgb(255, 255, 255);
 }
 
 .login-container{  
@@ -82,7 +83,7 @@ p.login{
 
 p.login-title{
     font-size: 30px;
-    color:rgb(213, 213, 213);
+    color:rgb(255, 255, 255);
 }
 
 input.submit{
@@ -92,7 +93,7 @@ input.submit{
     height: 40px;
     font-size: 25px;
     font-weight: bold;
-    color:rgb(213, 213, 213);
+    color:rgb(255, 255, 255);
     border: 1px solid rgb(32, 49, 26);
     box-shadow: 5px 5px rgb(32, 49, 26);
     border-radius: 5px;
@@ -140,7 +141,16 @@ img.nav:hover{
     transform: scale(.95);
     
 }
-
-
-
-Does this auto commit?
+.navBar a{
+   all:unset;
+}
+.notifbubble{
+    background: rgb(22, 42, 15);
+    border-radius: 50%;
+    padding: 3px;
+    cursor: default;
+    position:absolute;
+    right:55px;
+    top:0px;
+    z-index: 30;
+}

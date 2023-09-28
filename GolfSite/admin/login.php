@@ -69,15 +69,15 @@
 
                                 if ($checkPass == $hashedPass && $UsernameIn == $username) {
                                     $_SESSION["loggedIn"] = true;
+                                    $_SESSION['ID'] = $row['EmployeeID'];;
                                     $_SESSION['timestamp'] = time();
                                     if($accountType == "Manager"){
                                         $_SESSION["Manager"] = true;
-                                        header("location:" . SITEURL . 'admin/managerIndex.php'); 
                                     }
                                     else{
                                         $_SESSION["Manager"] = false;
-                                        header("location:" . SITEURL . 'admin/employeeIndex.php'); 
                                     }
+                                    header("location:" . SITEURL . 'admin/employeeIndex.php'); 
                                 } else {
                                     echo '<p class="error">Invalid Credentials</p>';
                                 }
