@@ -3,8 +3,11 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
+body.one{
     background-color: rgb(144, 238, 144);
+}
+body.two{
+    background-color: rgb(72, 72, 72);
 }
 p.error{
     padding-top: 20px;
@@ -35,11 +38,27 @@ p.error{
     background-position:-300px -300px, 800px 100px;
 }
 
+.bgImagesClubs{
+    opacity: .15;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/clubBG.webp), url(../images/clubBG2.webp);
+    background-repeat: no-repeat, no-repeat;
+}
+.clubFormat{
+    background-position:700px 250px, -300px 50px;
+    background-size:  2000px, 1000px;
+}
+
 /*login stuff*/
 input.login{
-    background-color: white;
+    background-color: rgb(213, 213, 213);
     height: 30px;
     width: 100%;
+    border:none;
+    box-shadow: 3px 3px rgb(89, 89, 89);
 }
 
 p.login{
@@ -47,7 +66,7 @@ p.login{
     padding-top:30px;
     font-weight: bold;
     text-align: left;
-    color:white;
+    color:rgb(213, 213, 213);
 }
 
 .login-container{  
@@ -55,7 +74,7 @@ p.login{
     align-items: center;
     margin:auto;
     margin-top: 10px;
-    background: rgba(46, 46, 46);
+    background: rgb(46, 46, 46);
     padding: 20px;
     border-radius: 10px;
     height: 375px;
@@ -63,38 +82,42 @@ p.login{
 
 p.login-title{
     font-size: 30px;
-    color:white
+    color:rgb(213, 213, 213);
 }
 
 input.submit{
+    cursor: pointer;
     margin-top:30px;
     width:100%;
     height: 40px;
     font-size: 25px;
     font-weight: bold;
-    color:rgb(255, 255, 255);
+    color:rgb(213, 213, 213);
     border: 1px solid rgb(32, 49, 26);
     box-shadow: 5px 5px rgb(32, 49, 26);
     border-radius: 5px;
-    background-color: rgb(73, 113, 59);
+    background-color: rgb(85, 131, 68);
     margin-bottom: 30px;
+    transition: 0.5s;
 }
 
 input.submit:hover{
-    border: 1px solid rgb(13, 20, 11);
-    box-shadow: 5px 5px rgb(13, 20, 11);
-    background-color: rgb(63, 96, 50);
+    border: 1px solid rgb(22, 34, 19);
+    box-shadow: 2px 2px rgb(22, 34, 19);
+    background-color: rgb(73, 110, 58);
+    transform: translate(3px, 3px);
 }
 
 section.navBar{
     text-align: center;
     color: #90ee90;
-    padding-top: 15px;
-    font-size: 40px;
-    background-color: rgb(73, 113, 59);
+    font-size: 30px;
+    padding-top: 10px;
+    background-color: rgb(46, 46, 46);
     width:100%;
-    height: 60px;
+    height: 40px;
 }
+
 .footer{
     text-align: center;
     width: 100%;
@@ -108,4 +131,12 @@ section.navBar{
 }
 img.nav{
     position:absolute;
+    height: 45px;
+    top:2px;
+    transition: .3s;
+}
+img.nav:hover{
+    opacity: .66;
+    transform: scale(.95);
+    
 }

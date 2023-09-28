@@ -3,28 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Manager Index</title>
+        <title>Login</title>
         <link rel="stylesheet" href="../css/admin.css">
     </head>
         <?php include('../config/constants.php') ?>
-    <body style="overflow: hidden;">
-    <!--setup bg images here-->
-        <div class="bgImages format2"></div>
-
+    <body style="overflow: hidden;" class="one">
         <div class="container">
-        <img src="<?php echo SITEURL;?>/images/MainLogo.webp" alt="User Icon" style="height:150px; padding-top:20px;">
-            <?php
-            
-                if($_SESSION["loggedIn"] != 1){
-                    if ($_SESSION["loggedIn"] == "sorry") {
-                        echo "Session Timeout, Please Log-In Again";
-                    }
-                }
-
-                $_SESSION["loggedIn"] = false;
-            ?>
-
+        <div class="bgImages format2"></div>
+        <img src="../images/MainLogo.webp" alt="User Icon" style="height:150px; padding-top:20px;">
             <div class="login-container">
+                
                 <p class="login-title">Employee Login</p>
                 <form action="" method="POST"> 
                     
@@ -33,15 +21,37 @@
                         <p class="login">Password</p>
                         <input class="login" type="password" name="password" value="">
                         <br>
-                        <input class="submit" type="submit" name="submit" value="Log In" class="btn-primary">
-                    
+
+                        <input class="submit" type="submit" name="submit" onClick="testResults(this.form)" id="test" value="Log In">
                 </form>
+                <?php
+                    
+                    if($_SESSION["loggedIn"]){
+                        if($_SESSION["loggedIn"] != 1){
+                            if ($_SESSION["loggedIn"] == "sorry") {
+                                echo '<p class="error">Session Timeout, Please Log-In Again';
+                            }
+                        }
+                    }
+
+                    $_SESSION["loggedIn"] = false;
+                ?>
+
+                <script>
+                    function testResults (form) {
+                        var button = document.getElementById("test");
+                        button.style.transition = "0s";
+                        button.style.transform = "translate(5px, 5px)";
+                        button.style.boxShadow = "0px 0px";
+                    }
+                </script>
+                
 
                 <?php
                     if(isset($_POST['submit']))
                     {
                         $UsernameIn = $_POST['username'];
-
+                
                         $sql = "SELECT * FROM employees WHERE Username='$UsernameIn'"; //retrive username
                         $res=mysqli_query($conn, $sql);
 

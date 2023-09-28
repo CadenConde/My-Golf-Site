@@ -18,9 +18,7 @@
 ?>
 
 <section class="navBar">
-    <a href="#">
-        <img src="<?php echo SITEURL;?>/images/icons/bell.webp" alt="Notification Image" class="nav" style="height:70px; left:5px; top:0;">
-    </a>
+    
     <p>Adventure Golf 
     <?php 
     if($_SESSION["Manager"] == true){
@@ -30,7 +28,11 @@
         echo "Employee";
     }
     ?> Portal</p>
+    
+    <a href="#">
+        <img src="../images/icons/bell.webp" alt="Notification Image" class="nav" style="right:60px;">
+    </a>
     <a href="login.php">
-        <img src="<?php echo SITEURL;?>/images/icons/account.webp" alt="Notification Image" class="nav" style="height:70px; right:5px; top:0;">
+        <img src="../images/icons/account.webp" alt="Notification Image" class="nav" style="right:5px;">
     </a>
 </section>

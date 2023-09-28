@@ -13,8 +13,8 @@
         }
     ?>
 
-    <body style="overflow: hidden;">
-        <div class="bgImages format1"></div>
+    <body style="overflow: hidden;" class="two">
+        <div class="bgImagesClubs clubFormat"></div>
     </body>
         
     <?php include('partials/footer.php'); ?>
