@@ -3,6 +3,9 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+a{
+    all:unset;
+}
 body.one{
     background-color: rgb(144, 238, 144);
 }
@@ -109,7 +112,9 @@ input.submit:hover{
     transform: translate(3px, 3px);
 }
 
+/*header/footer*/
 section.navBar{
+    cursor: default;
     text-align: center;
     color: #90ee90;
     font-size: 30px;
@@ -142,9 +147,6 @@ img.nav:hover{
     transform: scale(.95);
     
 }
-.navBar a{
-   all:unset;
-}
 .notifbubble{
     background: rgb(22, 42, 15);
     border-radius: 50%;
@@ -156,22 +158,85 @@ img.nav:hover{
     z-index: 30;
 }
 
+
+/*admin index*/
 .cardContainer{
     width: 90%;
     margin:auto;
+    margin-top:20px;
     text-align: center;
 }
 
 .adminCard{
     width: 300px;
-    background-color: #90ee90;
-    border-radius: 10px;
-    padding: 50px;
-    margin:20px;
+    background-color: rgb(46, 46, 46);
+    box-shadow: 0px 0px 3px 3px rgba(144, 238, 144, .5);
+    color:white;
+    border: 2px solid #90ee90;
+    border-radius: 6px;
+    padding: 20px 40px 60px 20px;
+    margin:30px;
     text-align: center;
     cursor:pointer;
     display: inline-flex;
+    font-size: 25px;
+    transition: .5s;
+    animation: none;
 }
-a{
-    all:unset;
+
+.adminCard:hover{
+    background-color: #90ee90;
+    color:black;
+    box-shadow: 0px 0px 12px 12px rgba(144, 238, 144, .5);
+    /*animation: pulse 1.5s, bgPulse 3s 1s infinite;*/
+    scale: 1.1;
+    margin: 25px;
+    
 }
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0px 0px 7px 7px rgba(144, 238, 144, .5);
+    }
+    66% {
+        
+    }
+    100% {
+        box-shadow: 0px 0px 7px 7px rgba(144, 238, 144, .5);
+    }
+}
+
+@keyframes bgPulse {
+    0% {
+        background-color: #90ee90;
+        
+    }
+    50% {
+        background-color: #75c275;
+        
+    }
+    100% {
+        background-color: #90ee90;
+        
+    }
+}
+
+/*
+.adminCard1{
+    background-image: linear-gradient(150deg, #90ee90, #51b151 50%, #2b612b 100%);
+}
+.adminCard2{
+    background-image: linear-gradient(150deg, #a190ee, #5751b1 50%, #2b2c61 100%);
+}
+.adminCard3{
+    background-image: linear-gradient(150deg, #90ee90, #51b151 50%, #2b612b 100%);
+}
+.adminCard4{
+    background-image: linear-gradient(150deg, #90ee90, #51b151 50%, #2b612b 100%);
+}
+.adminCard5{
+    background-image: linear-gradient(150deg, #90ee90, #51b151 50%, #2b612b 100%);
+}
+.adminCard6{
+    background-image: linear-gradient(150deg, #90ee90, #51b151 50%, #2b612b 100%);
+}*/
