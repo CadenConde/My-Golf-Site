@@ -51,8 +51,8 @@ p.error{
     background-repeat: no-repeat, no-repeat;
 }
 .clubFormat{
-    background-position:700px 250px, -300px 50px;
-    background-size:  2000px, 1000px;
+    background-position:700px 250px, -175px 50px;
+    background-size:  2000px, 850px;
 }
 
 /*login stuff*/
@@ -148,7 +148,7 @@ img.nav:hover{
     
 }
 .notifbubble{
-    background: rgb(22, 42, 15);
+    background: rgb(22, 41, 15);
     border-radius: 50%;
     padding: 3px;
     cursor: default;
@@ -167,8 +167,20 @@ img.nav:hover{
     text-align: center;
 }
 
+
+
+.adminCard img{
+    height:130px;
+    transform-origin: center right;
+    filter: grayscale(100%);
+    opacity: 60%;
+    transition: .5s;
+}
+
+
 .adminCard{
     width: 300px;
+    height: 50px;
     background-color: rgb(46, 46, 46);
     box-shadow: 0px 0px 3px 3px rgba(144, 238, 144, .5);
     color:white;
@@ -176,67 +188,47 @@ img.nav:hover{
     border-radius: 6px;
     padding: 20px 40px 60px 20px;
     margin:30px;
+    white-space: nowrap;
+    
     text-align: center;
     cursor:pointer;
     display: inline-flex;
-    font-size: 25px;
-    transition: .5s;
-    animation: none;
+    font-size: 22px;
+    transition: .5s ease-in-out;
 }
 
 .adminCard:hover{
-    background-color: #90ee90;
-    color:black;
+    background-color: rgb(144, 238, 144);
+    color: black;
     box-shadow: 0px 0px 12px 12px rgba(144, 238, 144, .5);
     /*animation: pulse 1.5s, bgPulse 3s 1s infinite;*/
     scale: 1.1;
-    margin: 25px;
-    
+    margin: 30px;
 }
 
-@keyframes pulse {
-    0% {
-        box-shadow: 0px 0px 7px 7px rgba(144, 238, 144, .5);
-    }
-    66% {
-        
-    }
-    100% {
-        box-shadow: 0px 0px 7px 7px rgba(144, 238, 144, .5);
-    }
+.adminCard:hover img{
+    filter: grayscale(0%);
+    opacity: 50%;
+    rotate: 5deg;
+    scale: 1.08;
 }
 
-@keyframes bgPulse {
-    0% {
-        background-color: #90ee90;
-        
-    }
-    50% {
-        background-color: #75c275;
-        
-    }
-    100% {
-        background-color: #90ee90;
-        
-    }
+.adminCard1 img{
+    transform: translate(78px,-20px);
+    scale: 1.01;
 }
-
-/*
-.adminCard1{
-    background-image: linear-gradient(150deg, #90ee90, #51b151 50%, #2b612b 100%);
+.adminCard2 img{
+    transform: translate(25px,-17px);
 }
-.adminCard2{
-    background-image: linear-gradient(150deg, #a190ee, #5751b1 50%, #2b2c61 100%);
+.adminCard3 img{
+    transform: translate(22px,-17px);
 }
-.adminCard3{
-    background-image: linear-gradient(150deg, #90ee90, #51b151 50%, #2b612b 100%);
+.adminCard4 img{
+    transform: translate(-3px,-16px);
 }
-.adminCard4{
-    background-image: linear-gradient(150deg, #90ee90, #51b151 50%, #2b612b 100%);
+.adminCard5 img{
+    transform: translate(70px,-28px);
 }
-.adminCard5{
-    background-image: linear-gradient(150deg, #90ee90, #51b151 50%, #2b612b 100%);
+.adminCard6 img{
+    transform: translate(20px,-16px);
 }
-.adminCard6{
-    background-image: linear-gradient(150deg, #90ee90, #51b151 50%, #2b612b 100%);
-}*/

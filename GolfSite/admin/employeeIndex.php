@@ -11,14 +11,14 @@
 <body style="overflow: hidden" class="two">
     <div class="bgImagesClubs clubFormat"></div>
     <div class="cardContainer">
-        <a href="#"><div class="adminCard adminCard1">My Schedule</div></a>
-        <a href="#"><div class="adminCard adminCard2">Edit My Availibilty</div></a>
-        <a href="#"><div class="adminCard adminCard3">Time Off Requests</div></a>
+        <a href="#"><div class="adminCard adminCard1">My Schedule<img src="../images/icons/calendar.webp" /></div></a>
+        <a href="#"><div class="adminCard adminCard2">Edit My Availabilty<img src="../images/icons/edit-calendar.webp" /></div></a>
+        <a href="#"><div class="adminCard adminCard3">Time Off Requests<img src="../images/icons/xmark-calendar.webp" /></div></a>
         <?php
             if($_SESSION["Manager"] == true){
-                echo '<a href="#"><div class="adminCard adminCard4">Schedule Employees</div></a>';
-                echo '<a href="#"><div class="adminCard adminCard5">Employee Info</div></a>';
-                echo '<a href="#"><div class="adminCard adminCard6">Booking Requests</div></a>';
+                echo '<a href="#"><div class="adminCard adminCard4">Schedule Employees<img src="../images/icons/person-calendar.webp" /></div></a>';
+                echo '<a href="#"><div class="adminCard adminCard5">Employee Info<img src="../images/icons/people.webp" /></div></a>';
+                echo '<a href="#"><div class="adminCard adminCard6">Booking Requests<img src="../images/icons/bookmark.webp" /></div></a>';
             }
         ?>
     </div>
