@@ -18,17 +18,19 @@
 ?>
 
 <section class="navBar">
-    <p>Adventure Golf 
-    <?php 
-    if($_SESSION["Manager"] == true){
-        echo "Manager";
-    }
-    else{
-        echo "Employee";
-    }
-    ?> Portal</p>
+    <a href= "employeeIndex.php">
+        <p>Adventure Golf 
+        <?php 
+        if($_SESSION["Manager"] == true){
+            echo "Manager";
+        }
+        else{
+            echo "Employee";
+        }
+        ?> Portal</p>
+    </a>
    
-    <a href="#">
+    <a href="notifications.php">
         <?php
             $id = $_SESSION['ID'];
             $sql = "SELECT * FROM notifications WHERE employeeID = '$id' AND beenRead = '0'"; //retrive notif count
