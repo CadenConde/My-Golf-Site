@@ -19,7 +19,7 @@
 
 <section class="navBar">
     <a href= "employeeIndex.php">
-        <p>Adventure Golf 
+        <p>
         <?php 
         if($_SESSION["Manager"] == true){
             echo "Manager";

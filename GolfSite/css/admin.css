@@ -115,13 +115,25 @@ input.submit:hover{
 /*header/footer*/
 section.navBar{
     cursor: default;
+    color: rgb(144, 238, 144);
     text-align: center;
-    color: #90ee90;
-    font-size: 30px;
-    padding-top: 10px;
+    padding-top: 2px;
     background-color: rgb(46, 46, 46);
     width:100%;
-    height: 40px;
+    height: 48px;
+}
+section.navBar p{
+    color: rgb(144, 238, 144);
+    text-shadow: 0 0 3px #fff, 0 0 6px #00ca1b, 0 0 9px #00f000;
+    font-size: 40px;
+    transition: .3s;
+    width: 300px;
+    margin: auto;
+}
+
+section.navBar p:hover{
+    color: rgb(175, 255, 175);
+    text-shadow: 0 0 2px #fff, 0 0 3px #00ca1b, 0 0 4px #00f000;
 }
 
 .footer{
@@ -194,7 +206,7 @@ img.nav:hover{
     cursor:pointer;
     display: inline-flex;
     font-size: 22px;
-    transition: .3s ease-in-out;
+    transition: .4s ease;
 }
 
 .adminCard:hover{
