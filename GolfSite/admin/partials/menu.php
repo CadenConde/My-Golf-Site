@@ -53,7 +53,7 @@
         <img src="../images/icons/bell.webp" alt="Notification Image" class="nav" style="right:60px;">
     </a>
 
-    <a href="login.php">
-        <img src="../images/icons/account.webp" alt="Notification Image" class="nav" style="right:5px;">
-    </a>
+    <div>
+        <div src="../images/icons/account.webp" alt="Notification Image" class="nav" style="right:5px;"></div>
+    </div>
 </section>

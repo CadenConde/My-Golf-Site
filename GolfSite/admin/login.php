@@ -15,11 +15,18 @@
                 
                 <p class="login-title">Employee Login</p>
                 <form action="" method="POST"> 
-                    
-                        <p class="login">Username</p>
-                        <input class="login" type="text" name="username" value="">
-                        <p class="login">Password</p>
-                        <input class="login" type="password" name="password" value="">
+                <div class="input-box">
+                    <input type="text" name="username" required>
+                    <label> Username</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" required>
+                    <label> Password</label>
+                </div>
+                <div class="remember-forget">
+                    <label><input type="checkbox"> Remember Me</label>
+                    <a href="#">Forget Password</a>
+                </div>
                         <br>
 
                         <input class="submit" type="submit" name="submit" onClick="testResults(this.form)" id="test" value="Log In">

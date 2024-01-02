@@ -56,32 +56,77 @@ p.error{
 }
 
 /*login stuff*/
-input.login{
-    background-color: rgb(255, 255, 255);
-    height: 30px;
-    width: 100%;
-    border:none;
-    box-shadow: 3px 3px rgb(89, 89, 89);
-}
 
-p.login{
-    width: 100%;
-    padding-top:30px;
-    font-weight: bold;
-    text-align: left;
-    font-size: 20px;
-    color:rgb(255, 255, 255);
-}
+
+.input-box{
+    position: relative;
+    width: auto;
+    margin: 30px 5px 30px 5px ;
+    border-bottom: 2px solid #fff;
+    border-radius: 5px;
+  }
+  
+  .input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .input-box input:focus~label,
+  .input-box input:valid~label{
+    top: -5px;
+  }
+  
+  .input-box input{
+    width: 97%;
+    height: 50px;
+    background: rgba(46, 46, 46, 0.3);
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 5px 0 5px;
+    border-radius: 5px;
+  }
+  
+  
+  
+  .remember-forget{
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .remember-forget label input{
+    margin: right 4px;
+  }
+  
+  .remember-forget a{
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .remember-forget a:hover{
+    text-decoration: underline;
+  }
 
 .login-container{  
     width:300px;
     align-items: center;
     margin:auto;
     margin-top: 10px;
-    background: rgb(46, 46, 46);
+    background: rgba(46, 46, 46, 0.15);
     padding: 20px;
     border-radius: 10px;
     height: 375px;
+    backdrop-filter: blur(10px);
 }
 
 p.login-title{
@@ -177,6 +222,7 @@ img.nav:hover{
     margin:auto;
     margin-top:20px;
     text-align: center;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 
