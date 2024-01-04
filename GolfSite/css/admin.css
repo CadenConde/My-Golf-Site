@@ -55,7 +55,171 @@ p.error{
     background-size:  2000px, 850px;
 }
 
-/*login stuff*/
+
+
+/*------------------------------------------------*/
+/*--------------------Menu------------------------*/
+/*------------------------------------------------*/
+/*Account Drop Down*/
+.icons-size{
+    color: #333;
+    font-size: 14px;
+}
+.action{
+    position:absolute;
+    top: 2px;
+    right: 25px;
+}
+.action .profile{
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    width: 45px;
+}
+.action .profile img{
+    position:absolute;
+    height: 45px;
+    top: 2px;
+    transition: .3s;
+    cursor:pointer;
+}
+.action .profile img:hover{
+    opacity: .66;
+    transform: scale(.95);
+    
+}
+.action .menu{
+    background-color:#FFF;
+    box-sizing:0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    padding: 10px 20px;
+    position: absolute;
+    right: -10px;
+    width: 200px;
+    transition: 0.5s;
+    top: 120px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+.action .menu.active{
+    opacity: 1;
+    top: 65px;
+    right: -10px;
+    visibility: visible;
+    z-index: 1;
+}
+
+.action .menu h3{
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3em;
+    padding: 20px 0px;
+    text-align: left;
+    width: 100%;
+}
+.action .menu h3 div{
+    color: #818181;
+    font-size: 14px;
+    font-weight: 400;
+}
+.action .menu ul li{
+    align-items: center;
+    border-top:1px solid rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: left;
+    list-style: none;
+    padding: 10px 0px;
+}
+.action .menu ul li img{
+    max-width: 20px;
+    margin-right: 10px;
+    opacity: 0.5;
+    transition:0.5s
+}
+.action .menu ul li a{
+    display: inline-block;
+    color: #555;
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.action .menu ul li:hover img{
+    opacity: 1;
+}
+.action .menu ul li:hover a{
+    color:#ff00ff;
+}
+/*Nav Bar*/
+section.navBar{
+    cursor: default;
+    color: rgb(144, 238, 144);
+    text-align: center;
+    padding-top: 2px;
+    background-color: rgb(46, 46, 46);
+    width:100%;
+    height: 48px;
+}
+section.navBar p{
+    color: rgb(175, 255, 175);
+    text-shadow: 0 0 2px #fff, 0 0 3px #00ca1b, 0 0 4px #00f000;
+    
+    font-size: 40px;
+    transition: .3s;
+    width: 300px;
+    margin: auto;
+}
+
+section.navBar p:hover{
+    color: rgb(144, 238, 144);
+    text-shadow: 0 0 3px #fff, 0 0 6px #00ca1b, 0 0 9px #00f000;
+}
+
+.footer{
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    position: absolute;
+    margin: auto;
+    bottom: 0px;
+    padding-top: 20px;
+    height: 100px;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.5));
+}
+img.nav{
+    position:absolute;
+    height: 45px;
+    top:2px;
+    transition: .3s;
+    cursor:pointer;
+}
+img.nav:hover{
+    opacity: .66;
+    transform: scale(.95);
+    
+}
+/*Notifications*/
+.notifbubble{
+    background: rgb(22, 41, 15);
+    border-radius: 50%;
+    padding: 3px;
+    cursor: default;
+    position:absolute;
+    right:55px;
+    top:0px;
+    z-index: 3;
+}
+
+
+
+
+/*------------------------------------------------*/
+/*--------------------Login-----------------------*/
+/*------------------------------------------------*/
 
 
 .input-box{
@@ -168,8 +332,9 @@ section.navBar{
     height: 48px;
 }
 section.navBar p{
-    color: rgb(144, 238, 144);
-    text-shadow: 0 0 3px #fff, 0 0 6px #00ca1b, 0 0 9px #00f000;
+    color: rgb(175, 255, 175);
+    text-shadow: 0 0 2px #fff, 0 0 3px #00ca1b, 0 0 4px #00f000;
+    
     font-size: 40px;
     transition: .3s;
     width: 300px;
@@ -177,8 +342,8 @@ section.navBar p{
 }
 
 section.navBar p:hover{
-    color: rgb(175, 255, 175);
-    text-shadow: 0 0 2px #fff, 0 0 3px #00ca1b, 0 0 4px #00f000;
+    color: rgb(144, 238, 144);
+    text-shadow: 0 0 3px #fff, 0 0 6px #00ca1b, 0 0 9px #00f000;
 }
 
 .footer{
@@ -216,13 +381,21 @@ img.nav:hover{
 }
 
 
+
+/*------------------------------------------------*/
+/*--------------------Portal----------------------*/
+/*------------------------------------------------*/
 /*admin index*/
 .cardContainer{
-    width: 90%;
+    width: 50%;
     margin:auto;
     margin-top:20px;
     text-align: center;
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    z-index: 0;
 }
 
 
@@ -243,7 +416,7 @@ img.nav:hover{
     box-shadow: 0px 0px 3px 3px rgba(144, 238, 144, .5);
     color:white;
     border: 2px solid #90ee90;
-    border-radius: 6px;
+    border-radius: 15px;
     padding: 20px 40px 60px 20px;
     margin:30px;
     white-space: nowrap;
@@ -253,6 +426,12 @@ img.nav:hover{
     display: inline-flex;
     font-size: 22px;
     transition: .4s ease;
+}
+
+.adminCard a {
+    height: 50px;
+    width: 300px;
+    border-radius: 15px;
 }
 
 .adminCard:hover{
@@ -290,3 +469,4 @@ img.nav:hover{
 .adminCard6 img{
     transform: translate(20px,-16px);
 }
+
