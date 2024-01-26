@@ -11,11 +11,11 @@
     <div class="bgImagesClubs clubFormat"></div>
     <?php
     if($_SESSION["Manager"] == true){
-        $sql = "SELECT * FROM notifications WHERE employeeID = '1' AND beenRead = '0';"; //if manager get all manager notifications
+        $sql = "SELECT * FROM notifications WHERE employeeID = '1' AND beenReadManager = '0';"; //if manager get all manager notifications
     }
     else{
         $id = $_SESSION['ID'];
-        $sql = "SELECT * FROM notifications WHERE employeeID='$id' AND beenRead = 0;"; //else only employee
+        $sql = "SELECT * FROM notifications WHERE employeeID='$id' AND beenReadEmployee = 0;"; //else only employee
     }
 
     $res=mysqli_query($conn, $sql);
@@ -44,9 +44,9 @@
 
             $row=mysqli_fetch_assoc($res);
 
-            $notifId = $row['notifID'];//just for retrieval, use this for the read button
+            $notifId = $row['NotifID'];//just for retrieval, use this for the read button
 
-            $content = $row['notifContent'];
+            $content = $row['NotifContent'];
             
             echo "<tr> <td>$i</td> <td>$content</td></tr>"; //rows
         }
