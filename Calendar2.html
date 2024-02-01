@@ -8,6 +8,14 @@
             font-family: Arial, sans-serif;
         }
 
+        .calendar-holder{
+            width:420px
+        }
+
+        .calendar-header{
+            text-align: center;
+        }
+
         table {
             border-collapse: collapse;
             width: 100%;
@@ -22,8 +30,15 @@
 
         .date-cell {
             height: 60px;
+            width: 14%;
             overflow: hidden; /* Hide overflow by default */
             position: relative;
+        }
+
+        .month-label{
+            display: inline-block;
+            width: 200px;
+            user-select: none;
         }
 
         .date-box {
@@ -64,7 +79,8 @@
         .arrow {
             cursor: pointer;
             font-size: 20px;
-            margin: 5px;
+            margin: auto;
+            user-select: none;
         }
 
         .overflow-visible {
@@ -74,24 +90,25 @@
     </style>
 </head>
 <body>
-
-<table id="interactive-calendar">
-    <caption>
+<div class="calendar-holder">
+    <div class="calendar-header">
         <span class="arrow" onclick="prevMonth()">❮</span>
-        <span id="month-year"></span>
+        <span id="month-year" class="month-label"></span>
         <span class="arrow" onclick="nextMonth()">❯</span>
-    </caption>
-    <tr>
-        <th>Mon</th>
-        <th>Tue</th>
-        <th>Wed</th>
-        <th>Thu</th>
-        <th>Fri</th>
-        <th>Sat</th>
-        <th>Sun</th>
-    </tr>
-    <!-- Calendar content will be added dynamically using JavaScript -->
-</table>
+    </div>
+    <table id="interactive-calendar">
+        <tr>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+            <th>Sun</th>
+        </tr>
+        <!-- Calendar content will be added dynamically using JavaScript -->
+    </table>
+</div>
 
 <script>
     let currentMonth = new Date().getMonth();
