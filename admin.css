@@ -1,0 +1,470 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    all:unset;
+}
+
+body {
+    overflow: auto;
+}
+body.one{
+    background-color: rgb(144, 238, 144);
+}
+body.two{
+    background-color: rgb(72, 72, 72);
+}
+p.error{
+    padding-top: 20px;
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 25px;
+}
+.container{
+    text-align: center;
+}
+
+/*Background image stuff*/
+.bgImages{
+    opacity: .15;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/BGhole1.webp), url(../images/BGhole2.webp);
+    background-repeat: no-repeat, no-repeat;
+}
+.format1{
+    background-size: 2500px, 1500px;
+    background-position:600px 0px, -200px -100px;
+}
+.format2{
+    background-size: 2500px, 1500px;
+    background-position:-300px -300px, 800px 100px;
+}
+
+.bgImagesClubs{
+    opacity: .15;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/clubBG.webp), url(../images/clubBG2.webp);
+    background-repeat: no-repeat, no-repeat;
+}
+.clubFormat{
+    background-position:700px 250px, -175px 50px;
+    background-size:  2000px, 850px;
+}
+
+
+
+/*------------------------------------------------*/
+/*--------------------Menu------------------------*/
+/*------------------------------------------------*/
+/*Account Drop Down*/
+.icons-size{
+    color: #333;
+    font-size: 14px;
+}
+.action{
+    position:absolute;
+    top: 2px;
+    right: 25px;
+}
+.action .profile{
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    width: 45px;
+}
+.action .profile img{
+    position:absolute;
+    height: 45px;
+    top: 2px;
+    transition: .3s;
+    cursor:pointer;
+}
+.action .profile img:hover{
+    opacity: .66;
+    transform: scale(.95);
+    
+}
+.action .menu{
+    background-color:#FFF;
+    box-sizing:0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    padding: 10px 20px;
+    position: absolute;
+    right: -10px;
+    width: 200px;
+    transition: 0.5s;
+    top: 120px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+.action .menu.active{
+    opacity: 1;
+    top: 65px;
+    right: -10px;
+    visibility: visible;
+    z-index: 1;
+}
+
+.action .menu h3{
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3em;
+    padding: 20px 0px;
+    text-align: left;
+    width: 100%;
+}
+.action .menu h3 div{
+    color: #818181;
+    font-size: 14px;
+    font-weight: 400;
+}
+.action .menu ul li{
+    align-items: center;
+    border-top:1px solid rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: left;
+    list-style: none;
+    padding: 10px 0px;
+}
+.action .menu ul li img{
+    max-width: 20px;
+    margin-right: 10px;
+    opacity: 0.5;
+    transition:0.5s
+}
+.action .menu ul li a{
+    display: inline-block;
+    color: #555;
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.action .menu ul li:hover img{
+    opacity: 1;
+}
+.action .menu ul li:hover a{
+    color:#ff00ff;
+}
+/*Nav Bar*/
+section.navBar{
+    cursor: default;
+    color: rgb(144, 238, 144);
+    text-align: center;
+    padding-top: 2px;
+    background-color: rgb(46, 46, 46);
+    width:100%;
+    height: 48px;
+}
+section.navBar p{
+    color: rgb(175, 255, 175);
+    text-shadow: 0 0 2px #fff, 0 0 3px #00ca1b, 0 0 4px #00f000;
+    
+    font-size: 40px;
+    transition: .3s;
+    width: 300px;
+    margin: auto;
+}
+
+section.navBar p:hover{
+    color: rgb(144, 238, 144);
+    text-shadow: 0 0 3px #fff, 0 0 6px #00ca1b, 0 0 9px #00f000;
+}
+
+
+img.nav{
+    position:absolute;
+    height: 45px;
+    top:2px;
+    transition: .3s;
+    cursor:pointer;
+}
+img.nav:hover{
+    opacity: .66;
+    transform: scale(.95);
+    
+}
+/*Notifications*/
+.notifbubble{
+    background: rgb(22, 41, 15);
+    border-radius: 50%;
+    padding: 3px;
+    cursor: default;
+    position:absolute;
+    right:55px;
+    top:0px;
+    z-index: 3;
+}
+
+
+
+
+/*------------------------------------------------*/
+/*--------------------Login-----------------------*/
+/*------------------------------------------------*/
+
+
+.input-box{
+    position: relative;
+    width: auto;
+    margin: 30px 5px 30px 5px ;
+    border-bottom: 2px solid #fff;
+    border-radius: 5px;
+  }
+  
+  .input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .input-box input:focus~label,
+  .input-box input:valid~label{
+    top: -5px;
+  }
+  
+  .input-box input{
+    width: 97%;
+    height: 50px;
+    background: rgba(46, 46, 46, 0.3);
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 5px 0 5px;
+    border-radius: 5px;
+  }
+  
+  
+  
+  .remember-forget{
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .remember-forget label input{
+    margin: right 4px;
+  }
+  
+  .remember-forget a{
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .remember-forget a:hover{
+    text-decoration: underline;
+  }
+
+.login-container{  
+    width:300px;
+    align-items: center;
+    margin:auto;
+    margin-top: 10px;
+    background: rgba(46, 46, 46, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    height: 375px;
+    backdrop-filter: blur(10px);
+}
+
+p.login-title{
+    font-size: 30px;
+    color:rgb(255, 255, 255);
+}
+
+input.submit{
+    cursor: pointer;
+    margin-top:30px;
+    width:100%;
+    height: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    color:rgb(255, 255, 255);
+    border: 1px solid rgb(32, 49, 26);
+    box-shadow: 5px 5px rgb(32, 49, 26);
+    border-radius: 5px;
+    background-color: rgb(85, 131, 68);
+    margin-bottom: 30px;
+    transition: 0.5s;
+}
+
+input.submit:hover{
+    border: 1px solid rgb(22, 34, 19);
+    box-shadow: 2px 2px rgb(22, 34, 19);
+    background-color: rgb(73, 110, 58);
+    transform: translate(3px, 3px);
+}
+
+/*header/footer*/
+section.navBar{
+    cursor: default;
+    color: rgb(144, 238, 144);
+    text-align: center;
+    padding-top: 2px;
+    background-color: rgb(46, 46, 46);
+    width:100%;
+    height: 48px;
+}
+section.navBar p{
+    color: rgb(175, 255, 175);
+    text-shadow: 0 0 2px #fff, 0 0 3px #00ca1b, 0 0 4px #00f000;
+    
+    font-size: 40px;
+    transition: .3s;
+    width: 300px;
+    margin: auto;
+}
+
+section.navBar p:hover{
+    color: rgb(144, 238, 144);
+    text-shadow: 0 0 3px #fff, 0 0 6px #00ca1b, 0 0 9px #00f000;
+}
+
+.footer{
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    margin-top: auto;
+    position: relative;
+    bottom: 0px;
+    padding-top: 90%;
+    min-height: 78.2vh;
+    height: 100px;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.5));
+}
+img.nav{
+    position:absolute;
+    height: 45px;
+    top:2px;
+    transition: .3s;
+    cursor:pointer;
+}
+img.nav:hover{
+    opacity: .66;
+    transform: scale(.95);
+    
+}
+.notifbubble{
+    background: rgb(22, 41, 15);
+    border-radius: 50%;
+    padding: 3px;
+    cursor: default;
+    position:absolute;
+    right:55px;
+    top:0px;
+    z-index: 30;
+}
+
+
+
+/*------------------------------------------------*/
+/*--------------------Portal----------------------*/
+/*------------------------------------------------*/
+/*admin index*/
+.cardContainer{
+    width: 50%;
+    margin:auto;
+    margin-top:20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    z-index: 0;
+}
+
+
+
+.adminCard img{
+    height:130px;
+    transform-origin: center right;
+    filter: grayscale(100%);
+    opacity: 60%;
+    transition: .5s;
+}
+
+
+.adminCard{
+    width: 65%;
+    height: 20%;
+    background-color: rgb(46, 46, 46);
+    box-shadow: 0px 0px 3px 3px rgba(144, 238, 144, .5);
+    color:white;
+    border: 2px solid #90ee90;
+    border-radius: 15px;
+    padding: 20px 40px 60px 20px;
+    margin:30px;
+    white-space: nowrap;
+    
+    text-align: center;
+    cursor:pointer;
+    display: inline-flex;
+    font-size: 22px;
+    transition: .4s ease;
+}
+
+.adminCard a {
+    height: 50px;
+    width: 300px;
+    border-radius: 15px;
+}
+
+.adminCard:hover{
+    background-color: rgb(144, 238, 144);
+    color: black;
+    box-shadow: 0px 0px 12px 12px rgba(144, 238, 144, .5);
+    /*animation: pulse 1.5s, bgPulse 3s 1s infinite;*/
+    scale: 1.1;
+    margin: 30px;
+}
+
+.adminCard:hover img{
+    filter: grayscale(0%);
+    opacity: 50%;
+    rotate: 5deg;
+    scale: 1.08;
+}
+
+.adminCard1 img{
+    transform: translate(78px,-20px);
+    scale: 1.01;
+}
+.adminCard2 img{
+    transform: translate(25px,-17px);
+}
+.adminCard3 img{
+    transform: translate(22px,-17px);
+}
+.adminCard4 img{
+    transform: translate(-3px,-16px);
+}
+.adminCard5 img{
+    transform: translate(70px,-28px);
+}
+.adminCard6 img{
+    transform: translate(20px,-16px);
+}
+
+
+
+
