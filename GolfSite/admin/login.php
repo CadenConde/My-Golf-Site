@@ -23,10 +23,6 @@
                     <input type="password" name="password" required>
                     <label> Password</label>
                 </div>
-                <div class="remember-forget">
-                    <label><input type="checkbox"> Remember Me</label>
-                    <a href="#">Forget Password</a>
-                </div>
                         <br>
 
                         <input class="submit" type="submit" name="submit" onClick="testResults(this.form)" id="test" value="Log In">
