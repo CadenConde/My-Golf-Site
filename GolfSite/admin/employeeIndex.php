@@ -14,10 +14,10 @@
     <div class="cardContainer">
         <a href="#"><div class="adminCard adminCard1"><p>My Schedule</p><img src="../images/icons/calendar.webp" /></div></a>
         <a href="availability.php"><div class="adminCard adminCard2"><p>Edit My Availabilty</p><img src="../images/icons/edit-calendar.webp" /></div></a>
-        <a href="#"><div class="adminCard adminCard3"><p>Time Off Requests</p><img src="../images/icons/xmark-calendar.webp" /></div></a>
+        <a href="timeOff.php"><div class="adminCard adminCard3"><p>Time Off Requests</p><img src="../images/icons/xmark-calendar.webp" /></div></a>
         <?php
             if($_SESSION["Manager"] == true){
-                echo '<a href="#"><div class="adminCard adminCard4"><p>Schedule Employees</p><img src="../images/icons/person-calendar.webp" /></div></a>';
+                echo '<a href="scheduleEmployee.php"><div class="adminCard adminCard4"><p>Schedule Employees</p><img src="../images/icons/person-calendar.webp" /></div></a>';
                 echo '<a href="#"><div class="adminCard adminCard5"><p>Employee Info</p><img src="../images/icons/people.webp" /></div></a>';
                 echo '<a href="booking.php"><div class="adminCard adminCard6"><p>Booking Requests</p><img src="../images/icons/bookmark.webp" /></div></a>';
             }

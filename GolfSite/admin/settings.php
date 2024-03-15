@@ -9,7 +9,8 @@
     </head>
 <?php include('partials/menu.php');?>
 
-<body class="two bgImagesClubs clubFormat">
+<body class="two">
+<div class="bgImagesClubs clubFormat"></div>
     <div class="settings-container">
         <h1>Account Settings</h1>
         <form>
@@ -26,7 +27,7 @@
             <div class="form-row">
             <div class="form-col">
                 <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" value="555-555-5555">
+                <input type="tel" id="phone" name="phone" value="(555)-555-5555">
             </div>
             <div class="form-col">
                 <label for="old-password"> Old Password:</label>
