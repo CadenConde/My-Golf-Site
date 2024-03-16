@@ -12,7 +12,7 @@
 <body class="two">
     <div class="bgImagesClubs clubFormat"></div>
     <div class="cardContainer">
-        <a href="#"><div class="adminCard adminCard1"><p>My Schedule</p><img src="../images/icons/calendar.webp" /></div></a>
+        <a href="mySchedule.php"><div class="adminCard adminCard1"><p>My Schedule</p><img src="../images/icons/calendar.webp" /></div></a>
         <a href="availability.php"><div class="adminCard adminCard2"><p>Edit My Availabilty</p><img src="../images/icons/edit-calendar.webp" /></div></a>
         <a href="timeOff.php"><div class="adminCard adminCard3"><p>Time Off Requests</p><img src="../images/icons/xmark-calendar.webp" /></div></a>
         <?php
