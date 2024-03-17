@@ -31,6 +31,7 @@
         </div>
     </div>
     <script src="../js/mySchedule.js"></script>
+    
 </body>
 <?php include('partials/footer.php'); ?>
 

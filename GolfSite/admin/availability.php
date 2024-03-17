@@ -12,7 +12,7 @@
 <body class="two">
 <div class="bgImagesClubs clubFormat"></div>
     <div id="availability-container">
-        <h1>Employee Availability</h1>
+        <h1 class="empAvailh1">Employee Availability</h1>
         <div id="day-buttons">
         <button class="day-button" data-day="Sunday">Sun</button>
         <button class="day-button" data-day="Monday">Mon</button>
@@ -25,7 +25,7 @@
         <div id="availability-info"></div>
         <button id="save-availability">Save Availability</button>
     </div>
-
+    
     <script src="../js/availability.js"></script>
 </body>
 <?php include('partials/footer.php'); ?>

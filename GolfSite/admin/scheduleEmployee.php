@@ -42,7 +42,7 @@
   </div>
 
   <script src="../js/calendar.js"></script>
-
+  
 </body>
 <?php include('partials/footer.php'); ?>
 

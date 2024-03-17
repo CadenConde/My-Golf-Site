@@ -33,6 +33,7 @@
   </div>
 
   <script src="../js/timeOff.js"></script>
+  
 </body>
 <?php include('partials/footer.php'); ?>
 
