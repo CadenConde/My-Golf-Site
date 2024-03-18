@@ -91,18 +91,6 @@
             ?>
         </div>
     </div>  
-    <div class="loading-wrapper">
-            <div class="loading">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
-        </div>
-        <script>
-            $(window).on("load", function(){
-                $(".loading-wrapper").fadeOut("slow");
-            })
-        </script>  
 </body>
 </html>
 
