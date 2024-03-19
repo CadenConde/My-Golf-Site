@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 26, 2024 at 08:06 PM
+-- Generation Time: Mar 19, 2024 at 07:40 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -43,14 +43,22 @@ CREATE TABLE `availability` (
 
 CREATE TABLE `bookingrequests` (
   `RequestID` int(11) NOT NULL,
-  `RequesterFirst` varchar(100) NOT NULL,
-  `RequesterLast` varchar(100) NOT NULL,
-  `Email` varchar(100) NOT NULL,
+  `RequesterName` varchar(100) NOT NULL,
+  `Course` varchar(100) NOT NULL,
   `PhoneNumber` varchar(14) NOT NULL,
-  `RequestDate` date NOT NULL,
-  `RequestTime` time NOT NULL,
-  `RequestDuration` time NOT NULL
+  `RequestDate` varchar(30) NOT NULL,
+  `RequestTime` varchar(30) NOT NULL,
+  `PlayersNum` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `bookingrequests`
+--
+
+INSERT INTO `bookingrequests` (`RequestID`, `RequesterName`, `Course`, `PhoneNumber`, `RequestDate`, `RequestTime`, `PlayersNum`) VALUES
+(1, 'Caden Conde', 'course1', '123465', '12354', '1235', 2),
+(2, 'Caden Conde', 'classic', '937-232-7722', '5262-02-13', '06:03', 1),
+(3, 'Eric Butcher', 'Adventure', '800-222-1222', '2024-04-12', '17:34', 12);
 
 -- --------------------------------------------------------
 
@@ -182,7 +190,7 @@ ALTER TABLE `availability`
 -- AUTO_INCREMENT for table `bookingrequests`
 --
 ALTER TABLE `bookingrequests`
-  MODIFY `RequestID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `RequestID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `employees`
