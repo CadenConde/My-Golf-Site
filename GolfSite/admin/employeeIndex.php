@@ -19,7 +19,7 @@
             if($_SESSION["Manager"] == true){
                 echo '<a href="scheduleEmployee.php"><div class="adminCard adminCard4"><p>Schedule Employees</p><img src="../images/icons/person-calendar.webp" /></div></a>';
                 echo '<a href="manageEmployees.php"><div class="adminCard adminCard5"><p>Employee Info</p><img src="../images/icons/people.webp" /></div></a>';
-                echo '<a href="booking.php"><div class="adminCard adminCard6"><p>Booking Requests</p><img src="../images/icons/bookmark.webp" /></div></a>';
+                echo '<a href="bookingRequests.php"><div class="adminCard adminCard6"><p>Booking Requests</p><img src="../images/icons/bookmark.webp" /></div></a>';
             }
         ?>
     </div>

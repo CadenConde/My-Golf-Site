@@ -1,33 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your Adventure Golf website">
-    <link rel="stylesheet" href="../css/site.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mini golf" />
     <title>Your Adventure Golf</title>
+    <link rel="stylesheet" href="../css/site.css" />
+    <link rel="icon" type="image/x-icon" href="../images/icons/golf.png" />
 </head>
-<body>
-    <div class="top-container">
-        <div id="nav-container">
-            <a href="#" id="nav-logo"><img src="../images/MainLogo.webp" alt="Your Adventure Golf logo"></a>
-            <div class="nav-content">
-                <a href="#">Book a Visit</a>
-                <a href="#">Pricing</a>
-                <a href="#">FAQs</a>
-                <a href="#">Contact</a>
-            </div>
+
+<body class="fadeIn">
+    <div class="page-container">
+        <div class="content-wrap">
+            <header id="top">
+                <nav>
+                    <div class="logo">
+                        <a name="logo-link" href="#top" class="scrollLink"><img alt="main golf background"></a>
+                    </div>
+                    <div class="nav-right">
+                        <div class="nav-links noselect">
+                            <ul>
+                                <li><a href="#about" class="un scrollLink">About</a></li>
+                                <li><a href="#pricing" class="un scrollLink">Pricing</a></li>
+                                <li><a href="#faq-contact" class="un scrollLink">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <a href="booking.php" class="book-btn">Book Now ⮕</a>
+                        <div class="burger-wrapper noselect">
+                            <div class="burger">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="burger-content">
+                                <a href="#about" class="un scrollLink">About</a>
+                                <a href="#pricing" class="un scrollLink">Pricing</a>
+                                <a href="#faq-contact" class="un scrollLink">FAQs</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <section class="opener">
+                <div class="opener-content">
+                    <h1>Experience the Ultimate Golfing Adventure</h1>
+                    <p>Enjoy a unique and exciting golf experience like never before.</p>
+                </div>
+            </section>
+
+            <section id="about">
+                <div class="about-container">
+                    <div class="about-content">
+                        <h2>About Your Adventure Golf</h2>
+                        <p>
+                            Since opening our doors to the public in 1987, Your Adventure Golf
+                            has become a must-see destination for people all over the Dayton
+                            area. We have also gone through some changes over the years. Our
+                            staff is excited to be able to help you get out and have some fun!
+                            Whether you're planning a day trip with your family or a quirky past
+                            timed date, we give visitors of all ages the chance to enjoy
+                            themselves in a fun-filled, ever evolving environment. Swing by and
+                            see what we're up to!
+                        </p>
+                    </div>
+                    <div class="about-images">
+                        <div class="image-collage">
+                            <img src="../images/collage1.webp" alt="Golf collage image" />
+                            <img src="../images/collage2.webp" alt="Golf collage image" />
+                            <img src="../images/collage3.webp" alt="Golf collage image" />
+                            <img src="../images/collage4.webp" alt="Golf collage image" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pricing">
+                <div class="pricing-container">
+                    <h2>Pricing</h2>
+                    <div class="pricing-cards">
+                        <div class="pricing-card">
+                            <h3>Kids</h3>
+                            <p class="age-range">AGES 4-12</p>
+                            <ul>
+                                <li>$8 for 18-holes of putt putt on either course.</li>
+                                <li>$10 for all day unlimited play on both courses.</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-card">
+                            <h3>Adults</h3>
+                            <p class="age-range">AGES 13+</p>
+                            <ul>
+                                <li>$10 for 18-holes of putt putt on either course.</li>
+                                <li>$15 for all day unlimited play on both courses.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="faq-contact">
+                <h2>FAQs</h2>
+                <div class="faq-contact-container">
+                    <div class="faq-container">
+                        <div class="faq">
+                            <div class="faq-header noselect">
+                                <h3>When are you open?</h3>
+                                <span class="faq-icon noselect">+</span>
+                            </div>
+                            <div class="faq-content">
+                                <p>At Your Adventure Golf, we are open spring through fall.</p>
+                                <p>
+                                    Of course it is Ohio so be on the look out for unpredictable
+                                    weather.
+                                </p>
+                                <p><strong>2023 HOURS</strong></p>
+                                <p>12 PM - 9 PM</p>
+                                <p>Monday - Sunday</p>
+                                <p>
+                                    WE STOP TAKING GUESTS 1 HOUR PRIOR TO CLOSING THROUGHOUT THE
+                                    WEEK
+                                </p>
+                                <p>PLEASE CALL IF YOU HAVE ANY QUESTIONS</p>
+                            </div>
+                        </div>
+                        <div class="faq">
+                            <div class="faq-header noselect">
+                                <h3>Is there an age minimum for children?</h3>
+                                <span class="faq-icon noselect">+</span>
+                            </div>
+                            <div class="faq-content">
+                                <p>
+                                    There is no age limit, but please note that our course dos not
+                                    allow access for strollers. Please note that children under 12
+                                    must be accompanied by an adult.
+                                </p>
+                                <p>
+                                    Children under 12 are not permitted to play the blue course
+                                    after 6 PM.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq">
+                            <div class="faq-header noselect">
+                                <h3>How do I book a special event or party?</h3>
+                                <span class="faq-icon noselect">+</span>
+                            </div>
+                            <div class="faq-content">
+                                <p>
+                                    You can reach us via phone or e-mail and one of our team
+                                    members can help you with any questions you might have regarding
+                                    bookings at Your Adventure Golf
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <h2>Contact Us</h2>
+                        <p>615 Miamisburg Centerville Rd, Washington Township, OH 45459, USA</p>
+                        <p>(937) 999-4478</p>
+                        <p>morefun@youradventuregolf.com</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <p>
+                    &copy; Your Adventure Golf LLC
+                    <a name="Facebook page" target="_blank" href="https://www.facebook.com/youradventuregolf"><img
+                            src="../images/icons/facebook.png" alt="facebook icon" class="footer-icon" /></a>
+                </p>
+                Flaticon attributions: 
+                <a href="https://www.flaticon.com/free-icons/golf" title="golf icons">Pixel Buddha Premium</a>
+                |
+                <a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons">Freepik</a>
+            </footer>
         </div>
-        <article class="home-text">Welcome to Adventure Golf lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</article>
-    </div>
-    <div class="mid-container">
-        
     </div>
 
-    <footer>
-        <!-- <p><a href="https://www.freepik.com/free-photo/mini-golf-ball-artificial-grass-summer-season-game_10136957.htm#page=2&query=mini%20golf&position=6&from_view=search&track=ais">Image by standret</a> on Freepik</p> -->
-    </footer>
-
-    <script src="../js/scroll.js"></script>
+    <script src="../js/smoothScroll.js"></script>
+    <script src="../js/faqAccordion.js"></script>
+    <script src="../js/burgerMenu.js"></script>
 </body>
+
 </html>
