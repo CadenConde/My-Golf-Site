@@ -14,7 +14,7 @@
         <h1>Booking Requests</h1>
         <ul class="booking-request-list">
             <?php
-            $sql = "SELECT * FROM bookingrequests";
+            $sql = "SELECT * FROM bookingrequests ORDER BY RequestDate DESC";
             $res = mysqli_query($conn, $sql);
             if ($res==TRUE)
             {
