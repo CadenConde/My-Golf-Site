@@ -1,1 +1,10 @@
 can you make a scheduleing calendar that lets the manager schedule an employee for a certain day. Make it look simple and modern. can you also make it so when you click on the day of the calendar
+
+
+
+
+can you make a scheduleing calendar that lets the manager schedule an employee for a certain day. Make it look simple and modern. can you also make it so when you click on the day of the calendar. Format it so that there is a calendar on the left side of the scree (but majority of the screen) and on the right there is a dropdown with all of the availible employees and 3 buttons to select which shift. Make it so the right side panel is active after chosing a date on the left. Can you use littl javascript. Also make sure the calendar has abbreveated day of week headers, and  make it so that this is php ready and uses the day of the year for the day when selected and format it so that the html is in a form
+
+
+can you make it so that each input, The selected employee from the drop down and shift is included in the form, and make sure it has the day of year for the selected day ands also day of the week
+
