@@ -123,6 +123,7 @@
                 $(".loading-wrapper").fadeOut("slow");
             })
         </script>
+        <?php include('partials/footer.php'); ?>
 </body>
-<?php include('partials/footer.php'); ?>
+
 </html>

@@ -15,8 +15,9 @@ td a {
   cursor: pointer;
 }
 
+
 button.log-button{
-  height: 50px; 
+  height: 40px; 
   width: 100px; 
   text-align:center;
   margin-top: 20px;
@@ -36,6 +37,9 @@ button.log-button:hover{
   transform: translate(2px, 2px);
 }
 
+button.no-margins{
+  margin-top: 0px;
+}
 .center{
   text-align: center;
 }
@@ -50,7 +54,7 @@ body.two{
     background-color: rgb(72, 72, 72);
 }
 p.error{
-    padding-top: 20px;
+    padding-top: 10px;
     color: #ff0000;
     font-weight: bold;
     font-size: 25px;
@@ -251,6 +255,7 @@ img.nav:hover{
 
 .input-box{
     position: relative;
+    
     width: auto;
     margin: 30px 5px 30px 5px ;
     border-bottom: 2px solid #fff;
@@ -260,7 +265,8 @@ img.nav:hover{
   .input-box label{
     position: absolute;
     top: 50%;
-    /*left: 5px;*/
+    
+    left: 5px;
     transform: translateY(-50%);
     font-size: 1em;
     color: #fff;
@@ -328,7 +334,7 @@ p.login-title{
 
 input.submit{
     cursor: pointer;
-    margin-top:30px;
+    margin-top:10px;
     width:100%;
     height: 40px;
     font-size: 25px;
@@ -338,7 +344,7 @@ input.submit{
     box-shadow: 5px 5px rgb(32, 49, 26);
     border-radius: 5px;
     background-color: rgb(85, 131, 68);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     transition: 0.5s;
 }
 
@@ -381,6 +387,7 @@ section.navBar p:hover{
     margin-top: -400px;
     position: absolute;
     bottom: 0;
+    left: 0;
     height: auto;
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .5));
     z-index: 0;

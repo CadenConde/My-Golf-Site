@@ -22,6 +22,17 @@
             $l_name = $rows['LastName'];
             $phone = $rows['PhoneNumber'];
             $passChange = $rows['LastPasswordChange'];
+
+            $passChangeDate = date_create($rows['LastPasswordChange']);
+            $today = date_create(date('Y-m-d'));
+
+            $dateDiff = date_diff($passChangeDate, $today);
+            $daysElapsed = intval($dateDiff->format("%d"));
+
+            //
+            
+
+            //echo "$dateDiff days since last password change";
             $passwordLength = $rows['PasswordLength'];
         }
     }
@@ -57,6 +68,11 @@
         echo "<tr><td style='text-align: center; width=100%'><a href='updateAccount.php'>Change Account Info</a></td></tr>";
         echo "</table><br>"; //end table
         
+        if($daysElapsed > 10){
+            echo "<div class='container'><p class='error'>Password $daysElapsed days old, please change it.</p></div>"; 
+        }
+        
+
         echo "<table>"; //table
         echo "<tr> <th>Password </th> <th>$len</th></tr>";
         echo "<tr> <th width='50%'>Last Changed</th> <th width='50%'>$passChange</th> </tr>";
@@ -75,7 +91,6 @@
                 location.href = "login.php";
             }
         </script>    
-
 </body>
 <?php include('partials/footer.php'); ?>
 </html>

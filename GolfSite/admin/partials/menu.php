@@ -37,7 +37,13 @@
     <a href="notifications.php">
         <?php
             $id = $_SESSION['ID'];
-            $sql = "SELECT * FROM notifications WHERE employeeID = '$id' AND beenReadEmployee = '0'"; //retrive notif count
+            if($_SESSION["Manager"] == true){
+                $sql = "SELECT * FROM notifications WHERE beenReadManager = '0';"; //if manager get all manager notifications
+            }
+            else{
+                $sql = "SELECT * FROM notifications WHERE employeeID = '$id' AND beenReadEmployee = '0'"; //else only employee
+            }
+            //retrive notif count
             $res=mysqli_query($conn, $sql);
             $count = mysqli_num_rows($res);
             if($count>99){

@@ -12,7 +12,6 @@
     <div class="bgImages format2"></div>
     <img src="../images/MainLogo.webp" alt="User Icon" style="height:150px; padding-top:20px;">
         <div class="login-container">
-            
             <p class="login-title">Employee Login</p>
             <form action="" method="POST"> 
             <div class="input-box">
@@ -23,10 +22,10 @@
                 <input type="password" name="password" required>
                 <label> Password</label>
             </div>
-                    <br>
 
                     <input class="submit" type="submit" name="submit" onClick="testResults(this.form)" id="test" value="Log In">
             </form>
+            
             <?php
                 
                 if($_SESSION["loggedIn"] != 1){
@@ -36,7 +35,6 @@
                 }
                 $_SESSION["loggedIn"] = "no";
             ?>
-
             <script>
                 function testResults (form) {
                     var button = document.getElementById("test");

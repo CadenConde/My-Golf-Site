@@ -11,10 +11,13 @@
 <body class="two bgImagesClubs clubFormat">
     <?php
     if($_SESSION["Manager"] == true){
-        $sql = "SELECT * FROM notifications WHERE employeeID = '1' AND beenReadManager = '0';"; //if manager get all manager notifications
+        $status = "manager";
+        $id = $_SESSION['ID'];
+        $sql = "SELECT * FROM notifications WHERE beenReadManager = '0';"; //if manager get all manager notifications
     }
     else{
         $id = $_SESSION['ID'];
+        $status = "employee";
         $sql = "SELECT * FROM notifications WHERE employeeID='$id' AND beenReadEmployee = '0';"; //else only employee
     }
 
@@ -24,35 +27,29 @@
     {
         $count = mysqli_num_rows($res);
 
-        /*ideas for this:
-
-            -every notif will create 2 copies, an employee copy and manager copy.
-
-            -manager copy has employeeID of 1, employee has their respective employeeID.
-
-            -add button to mark the notif as read, maybe w/ jquery so no reload on update?
-
-            I would like to use jquery to check the database and update the number next
-            to the bell when its removed/added, but ill mess with that at some point
-
-        */
-
         echo "<table>"; //table
-        echo "<tr> <th>ID</th> <th>Notification</th> </tr>"; //header
+        echo "<tr> <th>ID</th> <th>Notification</th> <th style='width: 150px;'>Mark as Read</th></tr>"; //header
 
         for($i = 1; $i-1<$count; $i++){ //+1 stuff so id starts at 1
 
             $row=mysqli_fetch_assoc($res);
 
             $notifId = $row['NotifID'];//just for retrieval, use this for the read button
-
             $content = $row['NotifContent'];
-            
-            echo "<tr> <td>$i</td> <td>$content</td></tr>"; //rows
+            echo "<tr> <td>$i</td> <td>$content</td> <td><button onclick='markRead($notifId,". '"' . $status . '"' .")' class='log-button no-margins'>Mark as read</button></td></tr>"; //rows
         }
         echo "</table>"; //end table
     }
     ?>
+    <script>
+        function markRead(id, status) {
+            //document.getElementById("demo").innerHTML = status;
+            //id = 1;
+            //status = "manager"
+            location.href = "markNotifRead.php?id="+id+"&status="+status;
+        }
+    </script>
+
     <div class="loading-wrapper">
             <div class="loading">
                 <div class="dot"></div>

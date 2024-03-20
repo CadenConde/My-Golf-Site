@@ -52,6 +52,9 @@
                     else{
                         $sql = "INSERT INTO `bookingrequests` (`RequestID`, `RequesterName`, `Course`, `PhoneNumber`, `RequestDate`, `RequestTime`, `PlayersNum`) VALUES (NULL, '$name', '$course', '$phone', '$date', '$time', '$players');";
                         $res = mysqli_query($conn, $sql); //insert new order
+                        $today = date("m-d-Y");
+                        $sql = "INSERT INTO `notifications` (`NotifID`, `EmployeeID`, `NotifContent`, `BeenReadEmployee`, `BeenReadManager`) VALUES (NULL, '0', 'A new booking request has been placed on $today', '0', '0');";
+                        $res = mysqli_query($conn, $sql); //insert new order
                         echo "<div class='center'>Successfully Booked!</div>";
                     }
                 }
