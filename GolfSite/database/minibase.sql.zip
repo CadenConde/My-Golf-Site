@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 19, 2024 at 07:40 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Mar 20, 2024 at 06:22 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,7 +33,7 @@ CREATE TABLE `availability` (
   `DayOfWeek` varchar(9) NOT NULL,
   `StartTime` time NOT NULL,
   `EndTime` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -49,7 +49,7 @@ CREATE TABLE `bookingrequests` (
   `RequestDate` varchar(30) NOT NULL,
   `RequestTime` varchar(30) NOT NULL,
   `PlayersNum` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `bookingrequests`
@@ -58,7 +58,8 @@ CREATE TABLE `bookingrequests` (
 INSERT INTO `bookingrequests` (`RequestID`, `RequesterName`, `Course`, `PhoneNumber`, `RequestDate`, `RequestTime`, `PlayersNum`) VALUES
 (1, 'Caden Conde', 'course1', '123465', '12354', '1235', 2),
 (2, 'Caden Conde', 'classic', '937-232-7722', '5262-02-13', '06:03', 1),
-(3, 'Eric Butcher', 'Adventure', '800-222-1222', '2024-04-12', '17:34', 12);
+(3, 'Eric Butcher', 'Adventure', '800-222-1222', '2024-04-12', '17:34', 12),
+(4, 'Caden Conde', 'Classic', '937-230-1203', '2025-12-04', '02:03', 3);
 
 -- --------------------------------------------------------
 
@@ -76,16 +77,17 @@ CREATE TABLE `employees` (
   `Email` varchar(100) NOT NULL,
   `PhoneNumber` varchar(14) NOT NULL,
   `DOB` date NOT NULL DEFAULT current_timestamp(),
-  `LastPasswordChange` date NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `LastPasswordChange` date NOT NULL DEFAULT current_timestamp(),
+  `PasswordLength` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `employees`
 --
 
-INSERT INTO `employees` (`EmployeeID`, `AccountType`, `Username`, `Password`, `FirstName`, `LastName`, `Email`, `PhoneNumber`, `DOB`, `LastPasswordChange`) VALUES
-(1, 'Manager', 'admin', '5f4dcc3b5aa765d61d8327deb882cf99', '', '', '', '', '2024-01-26', '2024-01-26'),
-(2, 'Employee', 'admin1', '5f4dcc3b5aa765d61d8327deb882cf99', '', '', '', '', '2024-01-26', '2024-01-26');
+INSERT INTO `employees` (`EmployeeID`, `AccountType`, `Username`, `Password`, `FirstName`, `LastName`, `Email`, `PhoneNumber`, `DOB`, `LastPasswordChange`, `PasswordLength`) VALUES
+(1, 'Manager', 'admin', '5f4dcc3b5aa765d61d8327deb882cf99', 'Caden', 'Conde', 'cadenconde@gmail.com', '937-232-7722', '2024-01-26', '2024-01-26', 8),
+(2, 'Employee', 'admin1', '5f4dcc3b5aa765d61d8327deb882cf99', 'Eric', 'Bucher', 'bucher@icloud.com', '937-912-1942', '2024-01-26', '2024-01-26', 8);
 
 -- --------------------------------------------------------
 
@@ -99,7 +101,7 @@ CREATE TABLE `notifications` (
   `NotifContent` varchar(255) NOT NULL,
   `BeenReadEmployee` tinyint(1) NOT NULL DEFAULT 0,
   `BeenReadManager` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `notifications`
@@ -121,7 +123,7 @@ CREATE TABLE `schedule` (
   `ShiftDate` date NOT NULL,
   `ShiftStart` time NOT NULL,
   `ShiftEnd` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -134,7 +136,7 @@ CREATE TABLE `timeoffrequests` (
   `EmployeeID` int(11) NOT NULL,
   `TimeOffStartDate` date NOT NULL,
   `TimeOffEndDate` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -190,7 +192,7 @@ ALTER TABLE `availability`
 -- AUTO_INCREMENT for table `bookingrequests`
 --
 ALTER TABLE `bookingrequests`
-  MODIFY `RequestID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `RequestID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `employees`
