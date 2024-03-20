@@ -80,7 +80,7 @@
             <ul>
                 <li>
                 <span class="material-symbols-outlined">settings</span>
-                    <a href="<?php SITEURL?>settings.php">Settings</a>
+                    <a href="<?php SITEURL?>accountSettings.php">Settings</a>
                 </li>
                 <li>
                 <span class="material-symbols-outlined">dashboard</span>

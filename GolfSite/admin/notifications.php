@@ -15,7 +15,7 @@
     }
     else{
         $id = $_SESSION['ID'];
-        $sql = "SELECT * FROM notifications WHERE employeeID='$id' AND beenReadEmployee = 0;"; //else only employee
+        $sql = "SELECT * FROM notifications WHERE employeeID='$id' AND beenReadEmployee = '0';"; //else only employee
     }
 
     $res=mysqli_query($conn, $sql);

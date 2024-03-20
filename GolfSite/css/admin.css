@@ -3,10 +3,42 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 a{
     all:unset;
+    cursor: pointer;
 }
 
+td a { 
+  display: block;
+  padding: 5px;
+  cursor: pointer;
+}
+
+button.log-button{
+  height: 50px; 
+  width: 100px; 
+  text-align:center;
+  margin-top: 20px;
+  position: relative;
+  color:  #90ee90;
+  background-color: #333;
+  transition: ease .3s;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 2px 2px 0px 0px;
+}
+
+button.log-button:hover{
+  background-color: #420f0f;
+  color: #dcdcdc;
+  box-shadow: none;
+  transform: translate(2px, 2px);
+}
+
+.center{
+  text-align: center;
+}
 body {
     overflow: auto;
     justify-content: center;
@@ -228,7 +260,7 @@ img.nav:hover{
   .input-box label{
     position: absolute;
     top: 50%;
-    left: 5px;
+    /*left: 5px;*/
     transform: translateY(-50%);
     font-size: 1em;
     color: #fff;
@@ -238,7 +270,8 @@ img.nav:hover{
   
   .input-box input:focus~label,
   .input-box input:valid~label{
-    top: -5px;
+    top: -8px;
+    opacity: 0;
   }
   
   .input-box input{
@@ -408,7 +441,7 @@ img.nav:hover{
 
 .adminCard{
     width: 20rem;
-    height: 10rem;
+    height: 70px;
     background-color: rgb(46, 46, 46);
     box-shadow: 0px 0px 3px 3px rgba(144, 238, 144, .5);
     color:white;
@@ -530,7 +563,7 @@ img.nav:hover{
   
   .settings-container .form-col {
     flex: 1;
-    margin-right: 20px;
+    margin: 0px 20px;
   }
   
   .settings-container .form-col:last-child {
@@ -543,12 +576,12 @@ img.nav:hover{
     height: 60px;
     font-size: 24px;
     margin: auto;
-    margin-top: -20px;
+    /*margin-top: -20px;*/
     border: none;
     border-radius: 15px;
     color: rgb(175, 255, 175);
     background-color: rgb(46, 46, 46);
-    position: absolute;
+    /*position: absolute;*/
     transition: all 0.3s ease-in-out;
     z-index: 1;
   }
@@ -1406,6 +1439,7 @@ img.nav:hover{
 
 #shift-window li {
   margin-bottom: 5px;
+  
 }
 
 #shift-window #close-btn {
