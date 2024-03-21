@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2024 at 06:22 AM
+-- Generation Time: Mar 21, 2024 at 05:44 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -31,9 +31,28 @@ CREATE TABLE `availability` (
   `AvailabilityID` int(11) NOT NULL,
   `EmployeeID` int(11) NOT NULL,
   `DayOfWeek` varchar(9) NOT NULL,
-  `StartTime` time NOT NULL,
-  `EndTime` time NOT NULL
+  `available` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `availability`
+--
+
+INSERT INTO `availability` (`AvailabilityID`, `EmployeeID`, `DayOfWeek`, `available`) VALUES
+(1, 1, 'Sunday', 0),
+(2, 1, 'Monday', 1),
+(3, 1, 'Tuesday', 1),
+(4, 1, 'Wednesday', 1),
+(5, 1, 'Thursday', 1),
+(6, 1, 'Friday', 0),
+(7, 1, 'Saturday', 1),
+(8, 2, 'Sunday', 1),
+(9, 2, 'Monday', 1),
+(10, 2, 'Tuesday', 1),
+(11, 2, 'Wednesday', 1),
+(12, 2, 'Thursday', 1),
+(13, 2, 'Friday', 1),
+(14, 2, 'Saturday', 1);
 
 -- --------------------------------------------------------
 
@@ -59,7 +78,11 @@ INSERT INTO `bookingrequests` (`RequestID`, `RequesterName`, `Course`, `PhoneNum
 (1, 'Caden Conde', 'course1', '123465', '12354', '1235', 2),
 (2, 'Caden Conde', 'classic', '937-232-7722', '5262-02-13', '06:03', 1),
 (3, 'Eric Butcher', 'Adventure', '800-222-1222', '2024-04-12', '17:34', 12),
-(4, 'Caden Conde', 'Classic', '937-230-1203', '2025-12-04', '02:03', 3);
+(4, 'Caden Conde', 'Classic', '937-230-1203', '2025-12-04', '02:03', 3),
+(5, 'Andy Zhang', 'Classic', '937-297-2193', '2024-03-22', '13:44', 3),
+(6, 'Carter Cutler', 'Classic', '923-329-2352', '2024-03-25', '13:47', 3),
+(7, '12', 'Classic', '123-123-1234', '2024-03-18', '22:46', 4),
+(8, 'Camden', 'Adventure', '913-142-1241', '2024-03-30', '03:27', 1);
 
 -- --------------------------------------------------------
 
@@ -86,8 +109,8 @@ CREATE TABLE `employees` (
 --
 
 INSERT INTO `employees` (`EmployeeID`, `AccountType`, `Username`, `Password`, `FirstName`, `LastName`, `Email`, `PhoneNumber`, `DOB`, `LastPasswordChange`, `PasswordLength`) VALUES
-(1, 'Manager', 'admin', '5f4dcc3b5aa765d61d8327deb882cf99', 'Caden', 'Conde', 'cadenconde@gmail.com', '937-232-7722', '2024-01-26', '2024-01-26', 8),
-(2, 'Employee', 'admin1', '5f4dcc3b5aa765d61d8327deb882cf99', 'Eric', 'Bucher', 'bucher@icloud.com', '937-912-1942', '2024-01-26', '2024-01-26', 8);
+(1, 'Manager', 'admin', '5f4dcc3b5aa765d61d8327deb882cf99', 'Caden', 'Conde', 'cadenconde@gmail.com', '937-232-7722', '2024-01-26', '2024-02-16', 8),
+(2, 'Employee', 'admin1', '5f4dcc3b5aa765d61d8327deb882cf99', 'Eric', 'Bucher', 'bucher@icloud.com', '937-912-1942', '2024-01-02', '2024-03-20', 8);
 
 -- --------------------------------------------------------
 
@@ -109,7 +132,13 @@ CREATE TABLE `notifications` (
 
 INSERT INTO `notifications` (`NotifID`, `EmployeeID`, `NotifContent`, `BeenReadEmployee`, `BeenReadManager`) VALUES
 (1, 1, 'This is a test notification', 0, 0),
-(2, 1, 'Another notification', 0, 0);
+(2, 1, 'Another notification', 0, 0),
+(3, 0, 'A new booking request has been placed', 0, 1),
+(6, 0, 'A new booking request has been placed', 0, 1),
+(8, 0, 'A new booking request has been placed on 2020-0303-2024', 0, 1),
+(10, 0, 'A new booking request has been placed on 20-03-2024', 0, 1),
+(12, 0, 'A new booking request has been placed on 20-03-2024', 0, 1),
+(13, 0, 'A new booking request has been placed on 03-20-2024', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -186,13 +215,13 @@ ALTER TABLE `timeoffrequests`
 -- AUTO_INCREMENT for table `availability`
 --
 ALTER TABLE `availability`
-  MODIFY `AvailabilityID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `AvailabilityID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `bookingrequests`
 --
 ALTER TABLE `bookingrequests`
-  MODIFY `RequestID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `RequestID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `employees`
@@ -204,7 +233,7 @@ ALTER TABLE `employees`
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `NotifID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `NotifID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `schedule`
