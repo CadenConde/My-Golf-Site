@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Time Off Request Calendar</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time off Requests</title>
+    <link rel="stylesheet" href="../css/admin.css">
 </head>
 <?php include('partials/menu.php'); ?>
-<body>
-  <div class="container">
-    <div class="calendar">
-      <div class="calendar-header">
-        <span id="current-month"></span>
-        <div>
-          <button id="prev-month">Prev</button>
-          <button id="next-month">Next</button>
-        </div>
-      </div>
-      <div class="calendar-body">
-        <div class="day">Sun</div>
-        <div class="day">Mon</div>
-        <div class="day">Tue</div>
-        <div class="day">Wed</div>
-        <div class="day">Thu</div>
-        <div class="day">Fri</div>
-        <div class="day">Sat</div>
-      </div>
+
+<body class="two">
+<div class="bgImagesClubs clubFormat"></div>
+  <div id="calendar-container">
+    <div id="calendar-header">
+      <button id="prev-month">&larr;</button>
+      <h2 id="month-year"></h2>
+      <button id="next-month">&rarr;</button>
     </div>
-    <div class="sidebar">
-      <h3>Selected Dates</h3>
-      <ul class="selected-dates"></ul>
-      <form id="time-off-form" action="request.php" method="post">
-        <input type="hidden" id="selected-dates" name="selected_dates" value="">
-        <button type="submit" class="submit-btn" disabled>Confirm Request</button>
-      </form>
+    <div id="calendar">
+      <div id="day-headers"></div>
+      <div id="calendar-days"></div>
     </div>
   </div>
+
+  <div id="date-range-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Select Date Range:</h2>
+      <p id="date-range-info"></p>
+      <button id="confirm-date-range">Confirm</button>
+    </div>
+  </div>
+
   <script src="../js/timeOff.js"></script>
+  
 </body>
 <?php include('partials/footer.php'); ?>
+
 </html>
