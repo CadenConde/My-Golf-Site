@@ -61,11 +61,6 @@
        
         <button id="save-availability">Save Availability</button>
 
-        <?php
-        if(isset($_GET['saved'])){
-            echo "<br><p style='margin-top: 20px;'>Changes saved!<p>";
-        }
-        ?>
     </div>
     
     <script>
@@ -112,6 +107,7 @@
             const unavailableDaysList = unavailableDays.join(', ');
             availabilityInfo.textContent = `You are not available on: ${unavailableDaysList}.`;
         }
+        
         }
 
         saveAvailabilityButton.addEventListener('click', () => {
@@ -127,7 +123,18 @@
             //alert('Availability saved!');
         });
 
-        window.onload = updateAvailabilityInfo();
+        function runOnLoad(){
+            updateAvailabilityInfo();
+            <?php
+                if(isset($_SESSION['saved'])){
+                    echo "availabilityInfo.textContent = 'Changes saved!'";
+                    $_SESSION['saved'] = null;
+                }
+            ?>
+        }
+
+        window.onload = runOnLoad();
+        
     </script>
 </body>
 <?php include('partials/footer.php'); ?>

@@ -27,6 +27,9 @@
             </form>
             
             <?php
+                if(!isset($_SESSION["loggedIn"])){
+                    $_SESSION["loggedIn"] = false;
+                }
                 
                 if($_SESSION["loggedIn"] != 1){
                     if ($_SESSION["loggedIn"] == "sorry") {

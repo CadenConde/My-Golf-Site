@@ -42,10 +42,6 @@
             if(isset($_GET['id'])){
                 $id =  $_GET['id'];
             }
-            else{
-                $id = 1;
-            }
-
             $sql = "SELECT * FROM bookingrequests WHERE RequestID = '$id'";
             $res = mysqli_query($conn, $sql);
             if ($res==TRUE)

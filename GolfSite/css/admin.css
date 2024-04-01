@@ -555,6 +555,20 @@ img.nav:hover{
     color: rgb(175, 255, 175);
     background-color: rgb(46, 46, 46);
   }
+
+  .settings-container select {
+    display: block;
+    width: 90%;
+    height: 60px;
+    padding: 10px;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #90ee90;
+    border-radius: 5px;
+    color: rgb(175, 255, 175);
+    background-color: rgb(46, 46, 46);
+  }
   
   .settings-container input[type="password"] {
     margin-bottom: 50px;

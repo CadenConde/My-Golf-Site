@@ -59,6 +59,7 @@ else{
 } $Saturday = 1;
 
 $res = mysqli_query($conn, $sql);
-header("location:".SITEURL.'admin/availability.php?saved=true');
+$_SESSION['saved'] = true;
+header("location:".SITEURL.'admin/availability.php');
 
 ?>

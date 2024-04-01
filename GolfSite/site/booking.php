@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Your Adventure</title>
+    <link rel="icon" type="image/x-icon" href="../images/icons/golf.png" />
     <link rel="stylesheet" href="../css/site.css">
     <link rel="stylesheet" href="../css/booking.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -55,7 +56,13 @@
                         $today = date("m-d-Y");
                         $sql = "INSERT INTO `notifications` (`NotifID`, `EmployeeID`, `NotifContent`, `BeenReadEmployee`, `BeenReadManager`) VALUES (NULL, '0', 'A new booking request has been placed on $today', '0', '0');";
                         $res = mysqli_query($conn, $sql); //insert new order
-                        echo "<div class='center'>Successfully Booked!</div>";
+                        echo '<script>
+                        function myFunction() {
+                          alert("Successfully Booked!");
+                          location.href = "index.html";
+                        }
+                        myFunction();
+                        </script>';
                     }
                 }
             }?>

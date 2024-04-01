@@ -11,13 +11,22 @@
     if(isset($_SESSION['ID'])){
         $id = $_SESSION['ID'];
         $sql = "SELECT * FROM employees WHERE employeeID='$id'";
+        
+        $res = mysqli_query($conn,$sql);
+        $rows = mysqli_fetch_assoc($res);
+        $pass = $rows['Password'];
+
+        if(isset($_GET['id'])){
+            $id=$_GET['id'];
+        }
+
+        $sql = "SELECT * FROM employees WHERE employeeID='$id'";
         $res = mysqli_query($conn,$sql);
         if ($res == TRUE) {
             $rows = mysqli_fetch_assoc($res);
             $id = $rows['EmployeeID'];
             $user = $rows['Username'];
             $email = $rows['Email'];
-            $pass = $rows['Password'];
             $password = $rows['Password']; 
             $f_name = $rows['FirstName'];
             $l_name = $rows['LastName'];
@@ -25,6 +34,9 @@
             $passChange = $rows['LastPasswordChange'];
             $DOB = $rows['DOB'];
         }
+
+        
+
     }
 ?>
 
@@ -96,7 +108,11 @@
                     $res = mysqli_query($conn, $sql) or die();
                     if ($res = TRUE)
                     {
-                        echo '<script>function jsFunction(){location.href = "accountSettings.php";}';
+                        $destination = "accountSettings.php";
+                        if(isset($_GET['id'])){
+                            $destination = "manageEmployees.php";
+                        }
+                        echo "<script>function jsFunction(){location.href = '$destination';}";
                         echo 'jsFunction();</script>';
                     }
                     else{
