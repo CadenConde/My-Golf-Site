@@ -1,6 +1,6 @@
-# GolfSite
+# My Golf Site
 
-GolfSite is a website developed for a local mini-golf business, **My Adventure Golf**, to streamline operations and enhance the user experience. 
+My Golf Site is a website developed for a local mini-golf business, **My Adventure Golf**, to streamline operations and enhance the user experience. 
 The platform allows for management of employee schedules, time-off requests, and user authentication with varying permission levels for employees, managers,
 and administrators. This project was developed by a team of four, Caden Conde, John Jones (Parallax), Xander Combs, and Eric Bucher (Rechubcire).
 
